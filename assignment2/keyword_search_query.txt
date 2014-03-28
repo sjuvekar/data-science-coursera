@@ -1,0 +1,10 @@
+CREATE VIEW Search AS
+SELECT * FROM frequency
+UNION
+SELECT 'q' as docid, 'washington' as term, 1 as count 
+UNION
+SELECT 'q' as docid, 'taxes' as term, 1 as count
+UNION 
+SELECT 'q' as docid, 'treasury' as term, 1 as count
+
+SELECT Frequency.docid, Search.docid, SUM(Frequency.count * Search.count) AS s FROM Frequency, Search WHERE Search.docid="q" AND Search.term = Frequency.term GROUP BY Frequency.docid, Search.docid ORDER BY s;

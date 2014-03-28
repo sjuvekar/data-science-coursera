@@ -1,0 +1,6 @@
+Problem 1 : 1622294
+Problem 2A : 2
+Problem 2B : 319
+Problem 3A : 2998
+Problem 3B : non-distinct 45244, distinct 28461
+Problem 4 : 3982

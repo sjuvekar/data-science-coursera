@@ -1,0 +1,2 @@
+SELECT a.docid, b.docid, SUM (a.count * b.count) FROM Frequency as a, Frequency as b WHERE a.docid="10080_txt_crude" AND b.docid="17035_txt_earn" AND a.term = b.term GROUP BY a.docid, b.docid;
+SELECT a.docid, b.docid, SUM (a.count * b.count) FROM Frequency as a, Frequency as b WHERE a.docid > b.docid AND a.term = b.term GROUP BY a.docid, b.docid;
